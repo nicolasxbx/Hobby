@@ -1,7 +1,11 @@
 ﻿using Hobby;
 
 SortingAlgorithms sa = new();
-var array = sa.CreateRandomArray();
-sa.PrintArray(array);
+sa.RandomizeArray();
+sa.PrintArray();
+
+Console.WriteLine("sorting");
+sa.InsertionSort();
+sa.PrintArray();
 
 Console.ReadLine();

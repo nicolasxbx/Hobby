@@ -132,14 +132,39 @@ public class SortingAlgorithms
         }
     }
 
+    /// <summary>
+    /// O=n^2
+    /// </summary>
     public void SelectionSort()
     {
-        
+        for(int i = 0; i < array.Length;i++)
+        {
+            int smallestNumber = i;
+            for (int j = i + 1; j < array.Length; j++)
+            {
+                if (array[j] < array[smallestNumber]) smallestNumber = j;
+            }
+            Swap(i, smallestNumber);
+        }
     }       
 
     public void MergeSort()
     {
+        var arrays = Split(array);
+        
+    }
 
+    void Merge(int[] arr, int l, int r)
+    {
+
+    }
+
+    (int[] left, int[] right) Split(int[] arr)
+    {
+        int[] leftArray = arr.Take(arr.Length / 2).ToArray();
+        int[] rightArray = arr.Skip(arr.Length / 2).ToArray();
+
+        return (leftArray, rightArray);
     }
 
     public void QuickSort()

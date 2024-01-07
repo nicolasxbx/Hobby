@@ -5,7 +5,7 @@ sa.RandomizeArray();
 sa.PrintArray();
 
 Console.WriteLine("sorting");
-sa.InsertionSort();
+sa.SelectionSort();
 sa.PrintArray();
 
 Console.ReadLine();
